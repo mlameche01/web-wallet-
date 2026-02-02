@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Web Wallet EVM</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdn.jsdelivr.net/npm/ethers@6.10.0/dist/ethers.umd.min.js"></script>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<h2>🔐 Web Wallet EVM</h2>
+
+<input id="pin" type="password" placeholder="Code PIN">
+
+<select id="network">
+  <option value="polygon">Polygon</option>
+  <option value="fuse">Fuse</option>
+</select>
+
+<button onclick="createWallet()">Créer wallet</button>
+<button onclick="unlockWallet()">Déverrouiller</button>
+
+<hr>
+
+<p><b>Adresse :</b><br><span id="address"></span></p>
+<p><b>Solde natif :</b> <span id="balance"></span></p>
+<p><b>Solde token :</b> <span id="tokenBalance"></span></p>
+
+<hr>
+
+<h3>Envoyer token ERC20</h3>
+<input id="to" placeholder="Adresse destinataire">
+<input id="amount" placeholder="Montant">
+<button onclick="sendToken()">Envoyer</button>
+
+<script src="wallet.js"></script>
+</body>
+</html>
+
